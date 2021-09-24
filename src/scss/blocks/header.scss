@@ -1,0 +1,356 @@
+.header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  min-height: 40px;
+
+  @media (max-width: $md3) {
+    min-height: 5px;
+  }
+  &._scroll {
+    .header__wrapper {
+      background-color: rgba(255, 255, 255, 0.8);
+
+      @media (any-hover: hover) {
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.95);
+        }
+      }
+    }
+
+    .header__body {
+      min-height: 60px;
+
+      @media (min-width: $md2) {
+        min-height: 80px;
+      }
+    }
+  }
+  // .header__wrapper
+
+  &__wrapper {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 50;
+    width: 100%;
+    transition: background-color 0.3s ease 0s;
+  }
+
+  // .header__container
+
+  &__container {
+  }
+
+  // .header__body
+
+  &__body {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+    min-height: 141px;
+    transition: min-height 0.3s ease 0s;
+
+    @media (max-width: $md2) {
+      min-height: 90px;
+    }
+
+    @media (max-width: $md3) {
+      justify-content: space-between;
+      min-height: 60px;
+    }
+  }
+
+  // .header__logo
+
+  &__logo {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    flex: 0 1 math.div(354px, 1192px) * 100%;
+    align-items: center;
+  }
+
+  // .header__menu
+
+  &__menu {
+    flex: 1 1 auto;
+  }
+
+  // .header__burger
+
+  &__burger {
+  }
+}
+
+.logo-header {
+  // .logo-header__image
+
+  &__image {
+    margin: 0 18px 0 0;
+  }
+
+  // .logo-header__text
+
+  &__text {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: math.div(33px, 22px) * 100%;
+    color: #fff;
+  }
+}
+
+.menu {
+  display: flex;
+  @media (min-width: $md3) {
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @media (max-width: $md3) {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    overflow: auto;
+    flex-direction: column;
+    padding: 80px 15px 30px;
+    width: 100%;
+    height: 100%;
+    background-color: #3029d9;
+    transition: left 0.3s ease 0s;
+    &._active {
+      left: 0;
+    }
+  }
+  // .menu__body
+
+  &__body {
+    @media (max-width: $md3) {
+      &:not(:last-child) {
+        margin: 0 0 30px 0;
+      }
+    }
+  }
+
+  // .menu__list
+
+  &__list {
+    display: flex;
+    @media (min-width: $md3) {
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 0 10px;
+    }
+
+    @media (max-width: 910px) {
+      justify-content: space-between;
+    }
+
+    @media (max-width: $md3) {
+      flex-direction: column;
+    }
+  }
+
+  // .menu__item
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0;
+    color: #fff;
+
+    &:not(:last-child) {
+      margin: 0 36px 0 0;
+    }
+
+    &._active {
+      .menu__link,
+      .menu__arrow {
+        opacity: 1;
+      }
+
+      .menu__link {
+        &::after {
+          content: '';
+          position: absolute;
+          left: 50%;
+          bottom: -4px;
+          width: 50%;
+          height: 2px;
+          background-color: #fff;
+          transform: translate(-50%, 0);
+        }
+      }
+
+      @media (max-width: $md3) {
+        .menu__link {
+          &::after {
+            left: 0;
+            width: 100%;
+            transform: translate(0, 0);
+          }
+        }
+      }
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        .menu__link,
+        .menu__arrow,
+        .menu__sub-list {
+          opacity: 1;
+        }
+
+        .menu__arrow {
+          transform: rotate(-180deg);
+        }
+
+        .menu__sub-list {
+          visibility: visible;
+          transform: translate(0, 0);
+          pointer-events: auto;
+        }
+      }
+    }
+
+    @media (min-width: $md3) {
+      &._hover {
+        opacity: 1;
+
+        .menu__arrow {
+          transform: rotate(-180deg);
+        }
+
+        .menu__sub-list {
+          opacity: 1;
+          visibility: visible;
+          transform: translate(0, 0);
+          pointer-events: auto;
+        }
+      }
+    }
+
+    @media (max-width: 910px) {
+      &:not(:last-child) {
+        margin: 0 10px 0 0;
+      }
+    }
+
+    @media (max-width: $md3) {
+      width: 100%;
+      &:not(:last-child) {
+        margin: 0 0 10px;
+      }
+    }
+  }
+
+  // .menu__contact-btn
+
+  &__contact-btn {
+    display: flex;
+    flex: 0 0 115px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    padding: 0 15px;
+    min-height: 39px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: math.div(21px, 14px) * 100%;
+    color: #fff;
+
+    @media (max-width: $md3) {
+      flex: 0 1 auto;
+      align-self: flex-start;
+      padding: 15px 20px;
+      font-size: 20px;
+    }
+  }
+
+  // .menu__link
+
+  &__link {
+    position: relative;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: math.div(21px, 14px) * 100%;
+    color: inherit;
+    opacity: 0.6;
+    transition: opacity 0.3s ease 0s;
+
+    @media (max-width: $md3) {
+      font-size: 24px;
+    }
+  }
+
+  // .menu__arrow
+
+  &__arrow {
+    margin: 0 0 0 5px;
+    font-size: 7px;
+    color: #fff;
+    opacity: 0.6;
+    transition: all 0.3s ease 0s;
+
+    @media (max-width: $md3) {
+      font-size: 18px;
+      &._active {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+
+  // .menu__sub-list
+
+  &__sub-list {
+    position: relative;
+    flex: 1 1 100%;
+    padding: 15px;
+    background-color: #fff;
+
+    @media (min-width: $md3) {
+      position: absolute;
+      left: 0;
+      top: 100%;
+      min-width: 200px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translate(0, 10px);
+      transition: all 0.3s ease 0s;
+      pointer-events: none;
+    }
+
+    @media (max-width: $md3) {
+      margin: 0 -15px;
+      width: 100%;
+      transform: translate(0, 10px);
+    }
+  }
+
+  // .menu__sub-item
+
+  &__sub-item {
+    &:not(:last-child) {
+      margin: 0 0 5px;
+    }
+  }
+
+  // .menu__sub-link
+
+  &__sub-link {
+    line-height: 120%;
+    color: $blueColor;
+
+    @media (any-hover: hover) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
