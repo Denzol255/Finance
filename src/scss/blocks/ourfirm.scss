@@ -1,0 +1,219 @@
+.page {
+  // .page__ourfirm
+
+  &__ourfirm {
+  }
+}
+
+.ourfirm {
+  // .ourfirm__container
+
+  &__container {
+  }
+
+  // .ourfirm__body
+
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 114px 0 130px;
+
+    @media (max-width: $md2) {
+      padding: 80px 0;
+    }
+
+    @media (max-width: $md3) {
+      padding: 60px 0;
+    }
+
+    @media (max-width: $md4) {
+      padding: 40px 0;
+    }
+  }
+
+  // .ourfirm__description
+
+  &__description {
+    flex: 0 1 math.div(604px, 1192px) * 100%;
+    padding: 0 0 20px;
+
+    @media (max-width: 1216px) {
+      flex: 1 1 auto;
+      padding: 0 0 40px;
+    }
+  }
+
+  // .ourfirm__head-block
+
+  &__head-block {
+    &:not(:last-child) {
+      margin: 0 0 28px;
+    }
+
+    @media (max-width: 1216px) {
+      text-align: center;
+    }
+
+    @media (max-width: $md4) {
+      padding: 0 7px;
+    }
+  }
+
+  // .ourfirm__text
+
+  &__text {
+    max-width: 473px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: math.div(28px, 14px) * 100%;
+    color: $grayColor;
+
+    &:not(:last-child) {
+      margin: 0 0 24px;
+    }
+
+    @media (max-width: 1216px) {
+      max-width: 800px;
+    }
+
+    @media (max-width: $md4) {
+      font-size: 12px;
+      line-height: math.div(24px, 12px) * 100%;
+
+      &:not(:last-child) {
+        margin: 0 0 16px;
+      }
+    }
+  }
+
+  // .ourfirm__read-btn
+
+  &__read-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 28px 0 0;
+    border-radius: 4px;
+    padding: 10px 0;
+    max-width: 140px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: math.div(21px, 14px) * 100%;
+    text-align: center;
+    color: #fff;
+    background-color: $blueColor;
+
+    @media (max-width: 1216px) {
+      max-width: 200px;
+    }
+
+    @media (max-width: $md4) {
+      max-width: 100%;
+    }
+  }
+
+  // .ourfirm__cards
+
+  &__cards {
+  }
+}
+
+.cards-ourfirm {
+  display: flex;
+
+  @media (min-width: 1216px) {
+    flex: 1 1 auto;
+    align-self: flex-end;
+  }
+
+  @media (max-width: 1216px) and (min-width: 611px) {
+    justify-content: center;
+  }
+
+  @media (max-width: 610px) {
+    flex: 1 1 100%;
+    flex-direction: column;
+    margin: 0 -15px;
+  }
+  // .cards-ourfirm__column
+
+  &__column {
+    // .cards-ourfirm__column_left
+
+    &_left {
+      @media (min-width: 611px) {
+        align-self: flex-end;
+        &:not(:last-child) {
+          margin: 0 28px 0 0;
+        }
+      }
+    }
+
+    // .cards-ourfirm__column_right
+
+    &_right {
+      padding: 0 0 52px;
+    }
+
+    @media (max-width: 610px) {
+      width: 100%;
+      &:not(:last-child) {
+        margin: 0 0 25px;
+      }
+    }
+  }
+
+  // .cards-ourfirm__card
+
+  &__card {
+    padding: 38px 50px;
+    width: 278px;
+
+    background-color: rgba(48, 41, 217, 0.2);
+
+    &:not(:last-child) {
+      margin: 0 0 25px;
+    }
+
+    @media (min-width: 611px) {
+      box-shadow: 0 10px 50px rgba(48, 41, 217, 0.3);
+      &_left {
+        &-top,
+        &-bottom {
+          border-radius: 80px 0 80px 80px;
+        }
+      }
+
+      &_right {
+        &-top,
+        &-bottom {
+          border-radius: 80px 80px 80px 0;
+        }
+      }
+    }
+
+    @media (max-width: 610px) {
+      border-radius: 0;
+      width: 100%;
+    }
+  }
+
+  // .cards-ourfirm__number
+
+  &__number {
+    display: block;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: math.div(68px, 44px) * 100%;
+    color: $blueColor;
+  }
+
+  // .cards-ourfirm__text
+
+  &__text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: math.div(28px, 16px) * 100%;
+    color: $blueColor;
+  }
+}
