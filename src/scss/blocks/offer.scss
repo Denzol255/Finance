@@ -1,0 +1,249 @@
+.page {
+  // .page__offer
+
+  &__offer {
+  }
+}
+
+.offer {
+  background-color: rgba(255, 255, 255, 0.2);
+  // .offer__container
+
+  &__container {
+  }
+
+  // .offer__wrapper
+
+  &__wrapper {
+    padding: 48px 0;
+
+    @media (max-width: $md2) {
+      padding: 0 0 40px;
+    }
+  }
+
+  // .offer__head-block
+
+  &__head-block {
+    margin: 0 0 104px;
+    text-align: center;
+    @media (max-width: $md2) {
+      margin: 0 0 82px;
+    }
+    @media (max-width: $md3) {
+      margin: 0 0 60px;
+    }
+    @media (max-width: $md4) {
+      margin: 0 0 38px;
+    }
+  }
+
+  // .offer__cards
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -17px -30px;
+
+    @media (max-width: $md3) {
+      justify-content: center;
+      margin: 0 -15px -30px;
+    }
+  }
+
+  // .offer__card
+
+  &__card {
+    margin: 0 0 30px;
+  }
+}
+
+.card-offer {
+  flex: 0 1 33.33%;
+  padding: 0 17px;
+
+  @media (max-width: 1130px) {
+    flex: 0 1 50%;
+  }
+
+  @media (max-width: $md3) {
+    flex: 0 1 auto;
+    padding: 0;
+  }
+
+  // .card-offer__column
+
+  &__column {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 8px;
+    min-height: 100%;
+    box-shadow: 0 10px 100px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        transform: translateY(-10px);
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      right: 149px;
+      top: 188px;
+      border-radius: 300px 0 300px 300px;
+      width: 414px;
+      height: 375px;
+      transform: rotate(90deg);
+
+      @media (max-width: 1130px) {
+        right: 230px;
+      }
+
+      @media (max-width: $md3) {
+        right: 330px;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 57px;
+      top: 284px;
+      border-radius: 300px 0 300px 300px;
+      width: 354px;
+      height: 321px;
+      transform: rotate(-90deg);
+
+      @media (max-width: 1130px) {
+        left: 200px;
+      }
+
+      @media (max-width: $md3) {
+        left: 382px;
+      }
+    }
+
+    // .card-offer__column_white
+
+    &_white {
+      background-color: #fff;
+      &::before,
+      &::after {
+        background: linear-gradient(
+          12.95deg,
+          rgba(48, 41, 215, 0.1) 22.55%,
+          rgba(49, 42, 217, 0) 96.85%
+        );
+      }
+    }
+
+    &_dark,
+    &_blue {
+      &::before,
+      &::after {
+        background: linear-gradient(
+          12.95deg,
+          rgba(255, 255, 255, 0.1) 22.55%,
+          rgba(255, 255, 255, 0) 96.85%
+        );
+      }
+    }
+
+    // .card-offer__column_blue
+
+    &_blue {
+      background-color: $blueColor;
+    }
+
+    // .card-offer__column_dark
+
+    &_dark {
+      background-color: #111849;
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 66px 40px;
+    color: $mainColor;
+    &_blue,
+    &_dark {
+      color: #fff;
+    }
+
+    @media (max-width: $md4) {
+      padding: 38px 18px 62px;
+    }
+  }
+
+  // .card-offer__icon
+
+  &__icon {
+    &:not(:last-child) {
+      margin: 0 0 34px;
+    }
+
+    @media (max-width: $md4) {
+      &:not(:last-child) {
+        margin: 0 0 24px;
+      }
+    }
+  }
+
+  // .card-offer__number
+
+  &__number,
+  &__text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: math.div(28px, 14px) * 100%;
+    text-align: center;
+    opacity: 0.5;
+
+    &:not(:last-child) {
+      margin: 0 0 9px;
+    }
+  }
+
+  // .card-offer__title
+
+  &__title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: math.div(68px, 24px) * 100%;
+    text-align: center;
+
+    @media (max-width: $md4) {
+      font-size: 18px;
+      line-height: math.div(24px, 18px) * 100%;
+      &:not(:last-child) {
+        margin: 0 0 18px;
+      }
+    }
+  }
+
+  // .card-offer__number
+
+  &__number {
+    @media (max-width: $md4) {
+      &:not(:last-child) {
+        margin: 0 0 18px;
+      }
+    }
+  }
+
+  // .card-offer__text
+
+  &__text {
+    @media (max-width: $md4) {
+      font-size: 12px;
+    }
+  }
+}

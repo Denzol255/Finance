@@ -1,6 +1,6 @@
 body {
   color: $mainColor;
-  background-color: #fafafa;
+  background-color: #fff;
 
   &._lock {
     overflow: hidden;
@@ -78,6 +78,30 @@ body {
       font-size: 22px;
       line-height: math.div(28px, 22px) * 100%;
     }
+  }
+}
+
+._blue-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 28px 0 0;
+  border-radius: 4px;
+  padding: 10px 0;
+  max-width: 140px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: math.div(21px, 14px) * 100%;
+  text-align: center;
+  color: #fff;
+  background-color: $blueColor;
+
+  @media (max-width: 1216px) {
+    max-width: 200px;
+  }
+
+  @media (max-width: $md4) {
+    max-width: 100%;
   }
 }
 

@@ -89,27 +89,27 @@
   // .ourfirm__read-btn
 
   &__read-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 28px 0 0;
-    border-radius: 4px;
-    padding: 10px 0;
-    max-width: 140px;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: math.div(21px, 14px) * 100%;
-    text-align: center;
-    color: #fff;
-    background-color: $blueColor;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // margin: 28px 0 0;
+    // border-radius: 4px;
+    // padding: 10px 0;
+    // max-width: 140px;
+    // font-weight: 600;
+    // font-size: 14px;
+    // line-height: math.div(21px, 14px) * 100%;
+    // text-align: center;
+    // color: #fff;
+    // background-color: $blueColor;
 
-    @media (max-width: 1216px) {
-      max-width: 200px;
-    }
+    // @media (max-width: 1216px) {
+    //   max-width: 200px;
+    // }
 
-    @media (max-width: $md4) {
-      max-width: 100%;
-    }
+    // @media (max-width: $md4) {
+    //   max-width: 100%;
+    // }
   }
 
   // .ourfirm__cards
@@ -120,13 +120,13 @@
 
 .cards-ourfirm {
   display: flex;
+  flex: 1 1 auto;
 
   @media (min-width: 1216px) {
-    flex: 1 1 auto;
     align-self: flex-end;
   }
 
-  @media (max-width: 1216px) and (min-width: 611px) {
+  @media (min-width: 611px) {
     justify-content: center;
   }
 
