@@ -59,7 +59,13 @@ body {
     line-height: math.div(68px, 24px) * 100%;
     color: $blueColor;
 
+    @media (max-width: $md3) {
+      font-size: 20px;
+      line-height: math.div(30px, 20px) * 100%;
+    }
+
     @media (max-width: $md4) {
+      display: inline-block;
       margin: 0 0 14px;
       font-size: 16px;
       line-height: math.div(24px, 16px) * 100%;
@@ -74,9 +80,14 @@ body {
     line-height: math.div(69px, 48px) * 100%;
     color: $mainColor;
 
+    @media (max-width: $md3) {
+      font-size: 28px;
+      line-height: math.div(36px, 28px) * 100%;
+    }
+
     @media (max-width: $md4) {
-      font-size: 22px;
-      line-height: math.div(28px, 22px) * 100%;
+      font-size: 20px;
+      line-height: math.div(28px, 20px) * 100%;
     }
   }
 }
@@ -102,6 +113,22 @@ body {
 
   @media (max-width: $md4) {
     max-width: 100%;
+  }
+}
+
+._text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: math.div(28px, 14px) * 100%;
+  color: $grayColor;
+
+  &:not(:last-child) {
+    margin: 0 0 math.div(24px, 14px) * 1em;
+  }
+
+  @media (max-width: $md4) {
+    font-size: 12px;
+    line-height: math.div(24px, 12px) * 100%;
   }
 }
 

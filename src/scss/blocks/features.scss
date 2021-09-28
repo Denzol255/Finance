@@ -81,7 +81,12 @@
     color: #b8c6d6;
 
     &:not(:last-child) {
-      margin: 0 0 24px 0;
+      margin: 0 0 math.div(24px, 14px) * 1em;
+    }
+
+    @media (max-width: $md4) {
+      font-size: 12px;
+      line-height: math.div(24px, 12px) * 100%;
     }
   }
 
@@ -106,6 +111,10 @@
       &:hover {
         background-color: #1426ad;
       }
+    }
+
+    @media (max-width: $md4) {
+      margin: 0 auto;
     }
   }
 
@@ -135,6 +144,10 @@
       img {
         border-radius: 200px 0 300px 300px;
       }
+    }
+
+    @media (max-width: $md4) {
+      padding-bottom: 87%;
     }
   }
 
