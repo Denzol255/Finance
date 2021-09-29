@@ -7,7 +7,20 @@
 
 .features {
   margin: 222px 0 0;
+  padding: 140px 0;
   background-color: $blueColor;
+
+  @media (max-width: $md2) {
+    padding: 105px 0;
+  }
+
+  @media (max-width: $md3) {
+    padding: 70px 0;
+  }
+
+  @media (max-width: $md4) {
+    padding: 40px 0 0;
+  }
 
   @media (max-width: $md2) {
     margin: 0;
@@ -24,19 +37,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 140px 0;
-
-    @media (max-width: $md2) {
-      padding: 105px 0;
-    }
-
-    @media (max-width: $md3) {
-      padding: 70px 0;
-    }
-
-    @media (max-width: $md4) {
-      padding: 40px 0;
-    }
   }
 
   // .features__description

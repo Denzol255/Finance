@@ -12,7 +12,7 @@ body {
   flex-direction: column;
   overflow: hidden;
   width: 100%;
-  min-height: 100%;
+  min-height: 100vh;
 }
 
 .page {
@@ -96,10 +96,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 28px 0 0;
   border-radius: 4px;
   padding: 10px 0;
-  max-width: 140px;
   font-weight: 600;
   font-size: 14px;
   line-height: math.div(21px, 14px) * 100%;
@@ -130,6 +128,11 @@ body {
     font-size: 12px;
     line-height: math.div(24px, 12px) * 100%;
   }
+}
+
+// Fixing height of slides in swiper
+.swiper-slide {
+  height: auto;
 }
 
 // .to {

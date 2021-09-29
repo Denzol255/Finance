@@ -60,6 +60,7 @@
     "@babel/polyfill": "^7.12.1",
     "lodash": "^4.17.21",
     "normalize.css": "^8.0.1",
-    "sass": "^1.39.2"
+    "sass": "^1.39.2",
+    "swiper": "^7.0.7"
   }
 }
