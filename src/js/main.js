@@ -9,6 +9,7 @@ import { webpChecker } from './modules/functions';
 import clickListner from './modules/clickListner';
 import sendForm from './modules/sendForm';
 import spollers from './modules/spollers';
+import changeHeader from './modules/header-scroll';
 
 // AOS init
 AOS.init();
@@ -64,3 +65,6 @@ sendForm();
 
 // Spollers
 spollers();
+
+// Header scroll and changing header height
+changeHeader();

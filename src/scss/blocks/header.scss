@@ -10,11 +10,11 @@
   }
   &._scroll {
     .header__wrapper {
-      background-color: rgba(255, 255, 255, 0.8);
+      background-color: rgba(48, 41, 217, 0.8);
 
       @media (any-hover: hover) {
         &:hover {
-          background-color: rgba(255, 255, 255, 0.95);
+          background-color: rgba(48, 41, 217, 0.95);
         }
       }
     }
@@ -92,9 +92,9 @@
     margin: 0 18px 0 0;
   }
 
-  // .logo-header__text
+  // .logo-header__name
 
-  &__text {
+  &__name {
     font-weight: 700;
     font-size: 22px;
     line-height: math.div(33px, 22px) * 100%;
@@ -264,6 +264,15 @@
     font-size: 14px;
     line-height: math.div(21px, 14px) * 100%;
     color: #fff;
+    transition: all 0.2s ease 0s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        border-width: 2px;
+        border-color: rgba(11, 17, 49, 0.5);
+        color: rgba(11, 17, 49, 0.5);
+      }
+    }
 
     @media (max-width: $md3) {
       flex: 0 1 auto;
