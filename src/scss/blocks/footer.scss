@@ -128,18 +128,13 @@
     }
   }
 
-  // .logo-footer__image
-
-  &__image {
-    margin-right: 18px;
-  }
-
   // .logo-footer__name
 
   &__name {
     font-weight: 700;
     font-size: 22px;
     line-height: math.div(33px, 22px) * 100%;
+    margin: 0 0 0 18px;
   }
 
   // .logo-footer__text
