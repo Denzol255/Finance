@@ -3,7 +3,7 @@ import { isMobile, _removeClasses } from './functions';
 const clickListner = () => {
   document.addEventListener('DOMContentLoaded', function () {
     document.addEventListener('click', (e) => {
-      e.preventDefault();
+      //e.preventDefault();
       const target = e.target;
       if (
         target.matches('.header__burger') ||
