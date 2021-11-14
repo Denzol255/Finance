@@ -26,6 +26,7 @@ if (document.querySelector('.slider-news__body')) {
     spaceBetween: 34,
     watchOverflow: true,
     speed: 800,
+    grabCursor: true,
     // loop: true,
     // loopAdditionalSlides: 5,
     preloadImages: false,
